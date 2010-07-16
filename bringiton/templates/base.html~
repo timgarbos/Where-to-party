@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+<title>BringItOn {% block subtitle %}{% endblock %}</title> 
+<link href="style.css" rel="stylesheet" type="text/css" /> 
+<link href="layout.css" rel="stylesheet" type="text/css" /> 
+</head> 
+<body id="page1"> 
+<div class="tall_content"> 
+	<div class="site_center"> 
+		<div class="main"> 
+			<!-- header  --> 
+			<div class="wr_logo"><h1>BringItOn | DK</h1></div> 
+			<div class="h_menu"><img src="images/m1m.jpg" alt="" id="image1" /><a href="index-1.html" onmouseout="mm_swapImgRestore()" onmouseover="mm_swapImage('image2','','images/m2m.jpg',2)"><img src="images/m2.jpg" id="image2" alt="" /></a></div> 
+		</div>	
+	</div> 
+</div> 
+<div class="tall_bot"> 
+	<div class="tall_top"> 
+		<div class="site_center"> 
+			<div class="main"> 
+				<!-- content --> 
+				<div class="content"> 
+					{% block content %}Content here!{% endblock %}
+					
+					<div class="clear"></div> 
+				</div> 
+			</div> 
+		</div> 
+	</div> 
+</div> 
+<!--footer--> 
+<div class="site_center"> 
+	<div class="main"> 
+		<div class="footer">BringItOn | DK</div> 
+	</div> 
+</div> 
+</body> 
+</html>

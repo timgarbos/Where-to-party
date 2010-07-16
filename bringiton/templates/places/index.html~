@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block subtitle %}Places{% endblock %}
+
+% block content %}
+{% if places_list %}
+    <ul>
+    {% for place in places_list %}
+        <li><a href="/places/{{ place.id }}/">{{ place.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No places are available.</p>
+{% endif %}
+{% endblock %}
