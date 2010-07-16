@@ -35,7 +35,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/home/garbos/bringiton/bringiton/media/'
+MEDIA_ROOT = ('/home/garbos/bringiton/bringiton/media/','/Users/kwree/Desktop/Bring.It.On/bringiton/media/')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -69,6 +69,7 @@ ROOT_URLCONF = 'bringiton.urls'
 
 TEMPLATE_DIRS = (
     '/home/garbos/bringiton/bringiton/templates',
+    '/Users/kwree/Desktop/Bring.It.On/bringiton/templatesx'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
