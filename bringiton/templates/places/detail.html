@@ -1,6 +1,11 @@
 {% extends "base.html" %}
+{% load facebook_tags %}
 
 {% block subtitle %}{{place}}{% endblock %}
 
-{% block content %}{{place}}{% endblock %}
+{% block content %}
+{{place}}
+
+<fb:comments> </fb:comments>
+{% endblock %}
 
