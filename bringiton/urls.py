@@ -7,7 +7,9 @@ admin.autodiscover()
 urlpatterns = patterns('',
 (r'^facebook/', include('facebookconnect.urls')),
     
-    (r'^', include('bringiton.places.urls')),
+    (r'^places/', include('bringiton.places.urls')),
+
+    (r'^', include('bringiton.home.urls')),
 
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
