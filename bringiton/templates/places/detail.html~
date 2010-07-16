@@ -2,5 +2,5 @@
 
 {% block subtitle %}{{place}}{% endblock %}
 
-% block content %}{{place}}{% endblock %}
+{% block content %}{{place}}{% endblock %}
 
