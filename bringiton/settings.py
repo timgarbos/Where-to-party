@@ -69,7 +69,7 @@ ROOT_URLCONF = 'bringiton.urls'
 
 TEMPLATE_DIRS = (
     '/home/garbos/bringiton/bringiton/templates',
-    '/Users/kwree/Desktop/Bring.It.On/bringiton/templatesx'
+    '/Users/kwree/Desktop/Bring.It.On/bringiton/templates'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
