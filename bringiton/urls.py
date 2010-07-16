@@ -15,7 +15,4 @@ urlpatterns = patterns('',
 
 
     (r'^admin/', include(admin.site.urls)),
-
-(r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': 'http://garbos.itu.dk/bringiton/'}),
 )
