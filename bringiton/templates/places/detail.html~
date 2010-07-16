@@ -1,6 +1,0 @@
-{% extends "base.html" %}
-
-{% block subtitle %}{{place}}{% endblock %}
-
-{% block content %}{{place}}{% endblock %}
-
