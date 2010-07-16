@@ -1,0 +1,96 @@
+* { margin:0; padding:0;}
+body { background:#021519; font-size:100%; line-height:1em; font-family:arial, tahoma; color:#ffffff;}
+
+
+/*in_line*/
+input, select { vertical-align:middle; font-weight:normal; font-family:tahoma; color:#000000; font-weight:normal;}
+img {border:0; vertical-align:top; text-align:left;}
+ul { list-style:none;}
+
+a:hover{text-decoration:none;}
+a {color:#3a8ea6;}
+
+
+
+.column { float:left;}
+.clear { clear:both;}
+
+
+h1{text-indent:-10000px; font-size:0; line-height:0;}
+
+.wr_log, .h_menu{ width:780px;}
+.tall_content{ background:url(images/tall_content.gif) 0 0 repeat-x;}
+/*header*/
+.wr_logo{ height:334px; background:url(images/wr_logo.jpg) 0 0 no-repeat;}
+.h_menu{ height:47px; background:url(images/menu_wr.gif) 0 0 repeat-x; text-indent:32px;}
+
+.footer{ color:#3a8ea6; font-size:0.625em; padding:13px 0 15px 64px;}
+.footer a{ color:#3a8ea6; text-decoration:none}
+.footer a:hover{ text-decoration:underline;}
+
+
+/*content*/
+.tall_bot{ background:#002a36 url(images/tall_bot.gif) bottom left repeat-x; width:100%;}
+.tall_top{ background:url(images/tall_top.gif) 0 0 repeat-x; width:100%;}
+
+.content{ padding:33px 0 23px 64px; font-size:0.625em;}
+.title{ display:block; margin-bottom:12px;}
+.content{ background:url(images/cont_wr_con.gif) bottom right no-repeat;}
+.content span a{ background:url(images/bull_span.gif) center left no-repeat; padding:0 0 0 9px; color:#ffffff; text-transform:none;}
+.content span{ color:#3a8ea6; text-transform:uppercase;}
+.button{ display:block;}
+.content p{ padding:0; margin:11px 0;}
+.img_left{ float:left; margin-right:20px;}
+.line_x{ background:url(images/line_x.gif) 0 0 repeat-x; margin:11px 0 0 0; height:16px;}
+
+/*================== index.html ==================*/
+#page1 .content .col_1 .col_box{ width:336px; padding-bottom:14px;}
+#page1 .content .col_1 .col_box img{ display:block}
+#page1 .content .col_1 .ind_img{ display:block; margin:0 0 5px 0;}
+#page1 .content .col_1 .col_box_1{ width:112px;}
+#page1 .content .col_1 .col_box_2{ width:112px;}
+#page1 .content .col_1 .col_box_3{ width:105px;}
+#page1 .content .col_2 .button{ margin:5px 0 40px 0; float:right;}
+
+/*================== index-1.html ==================*/
+#page2 .content .col_1{ padding-bottom:2px;}
+#page2 .content .col_2 .button{ margin:5px 0 0 0; float:right;}
+#page2 .content .col_2 span{ display:block; text-align:right;}
+#page2 .content .col_2{ line-height:1.312em;}
+
+/*================== index-2.html ==================*/
+#page3 .content .col_2 .col_box{ width:396px; padding:14px 0 0 0;}
+#page3 .content .col_2 .col_box_1{ width:209px;}
+#page2 .content .col_2 .col_box_2{ width:180px;}
+
+/*================== index-3.html ==================*/
+#page4 .content .col_1 .col_box{ width:681px; margin:-4px 0 0 0;}
+#page4 .content .col_1 .col_box_1{ width:454px;}
+#page4 .content .col_1 .col_box_2{ width:218px;}
+#page4 .content .col_1 .ind_img{ padding-bottom:14px;}
+#page4 .content .col_1 .ind_img .img{ margin-right:28px;}
+
+/*================== index-4.html ==================*/
+#page5 .content .col_1 ul{ margin:18px 0 11px 0;}
+#page5 .content .col_2 .indent_text{ margin:11px 0;}
+#page5 .content .col_2 span { display:block; margin-bottom:4px;}
+
+/*================== index-5.html ==================*/
+#page6 .content .col_2 .col_box{ width:400px;}
+#page6 .content .col_2 .col_box_1{ width:220px;}
+#page6 .content .col_2 .col_box_2{ width:172px;}
+#page6 .content .col_2 .col_box_2 a{ text-transform:uppercase;}
+#page6 .content .col_2 .h_f{ height:22px;}
+#page6 .content .col_2 input{ width:180px; height:18px;}
+#page6 .content .col_2 textarea{ width:172px; height:96px; display:block; margin-bottom:3px; overflow:auto;}
+#page6 .content .col_2 textarea, #page6 .content .col_2 input{ border:1px solid #434343; color:#021519; font-family:tahoma; font-size:11px;}
+
+/*================== index-6.html ==================*/
+#page7 .content .col_1 .indent_text{ padding-top:8px;}
+#page7 .content .col_1 span{ display:block; margin-bottom:7px;}
+
+
+
+/*==================list====================*/
+li a { background:url(images/list_bull.gif) center left no-repeat; margin:0; padding:0 0 0 9px; line-height:1.5em; color:#ffffff;}
+/*==========================================*/

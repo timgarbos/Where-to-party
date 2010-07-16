@@ -18,8 +18,7 @@
 			<div class="wr_logo"><h1>BringItOn | DK</h1></div> 
 
 			<div class="h_menu"><img src=" /site_media/images/m1m.jpg" alt="" id="image1" /><a href="index-1.html" onmouseout="mm_swapImgRestore()" onmouseover="mm_swapImage('image2','',' /site_media/images/m2m.jpg',2)"><img src=" /site_media/images/m2.jpg" id="image2" alt="" /></a></div> 
-{% show_connect_button %}		
-</div>	
+		</div>	
 	</div> 
 </div> 
 <div class="tall_bot"> 
