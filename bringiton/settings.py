@@ -67,6 +67,10 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'bringiton.urls'
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+)
+
 TEMPLATE_DIRS = (
     '/home/garbos/bringiton/bringiton/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -103,7 +107,7 @@ DUMMY_FACEBOOK_INFO = {
     'proxied_email':None,
 }
 
-FACEBOOK_API_KEY = '7fb85ab9c238d12e2157b0a4e87725c2'
-FACEBOOK_SECRET_KEY = 'a5680419635837d925a2175bf95eac8f'
+FACEBOOK_API_KEY = '753868bea6d51ce7fe5f681454cc28ed'
+FACEBOOK_SECRET_KEY = '09472264b65509762767a8a63af32a8c'
 FACEBOOK_INTERNAL = True
 FACEBOOK_CACHE_TIMEOUT = 1800

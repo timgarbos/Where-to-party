@@ -1,11 +1,33 @@
 {% extends "base.html" %}
 {% load facebook_tags %}
 
+{% block ogMeta %}
+<meta property="og:title" content="{{place.name}}"/>
+<meta property="og:image" content=""/>
+<meta property="og:description"
+          content="{{place.description|default:"A place on BringItOn.dk"}}"/>
+{% endblock %}
+
 {% block subtitle %}{{place}}{% endblock %}
 
 {% block content %}
-{{place}}
+<h2>{{place.name}}</h2><fb:like></fb:like> <fb:prompt-permission perms="email">Follow this place by email</fb:prompt-permission>
+<p>{{place.description|default:"A place on BringItOn.dk"}}</p>
 
-<fb:comments> </fb:comments>
+{% if is_owner%}
+<h3>New post</h3>
+<form method="post" action="">{{ postForm }}<br/><input type="submit" value"post"/></form>{% endif %}
+
+
+<h3>Posts</h3>
+{% for post in posts %}
+    <div>
+	<p>{{post.pub_date}}</p>
+    <p>{{post.content}}</p>
+    <fb:comments xid="{{post.id}}"> </fb:comments>
+    </div>
+{% endfor %}
+
+
 {% endblock %}
 

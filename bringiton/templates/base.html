@@ -8,12 +8,26 @@
 <link href="/site_media/style.css" rel="stylesheet" type="text/css" /> 
 <link href=" /site_media/layout.css" rel="stylesheet" type="text/css" /> 
 {% facebook_js %}
+ 
+    <meta property="og:type" content="bar"/>
+    <meta property="og:url" content="http://bringiton.dk{{request.path}}"/>
+    
+    <meta property="og:site_name" content="BringItOn"/>
+    <meta property="fb:admins" content="USER_ID"/>
+    
+          
+{% block ogMeta %}
+<meta property="og:title" content="BringItOn"/>
+<meta property="og:image" content=""/>
+<meta property="og:description"
+          content="BringItOn.dk base site"/>
+{% endblock %}
 </head> 
 <body id="page1"> 
 
 <div class="tall_content"> 
 	<div class="site_center"> 
-
+<fb:like-box profile_id="185550966885" header="false"></fb:like-box>
 		<div class="main"> 
 
 			<!-- header  --> 
