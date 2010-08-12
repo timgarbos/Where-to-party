@@ -19,5 +19,5 @@ urlpatterns = patterns('',
 
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': '/home/garbos/bringiton/bringiton/media/', 'show_indexes': True}),
-
+(r'^tinymce/', include('tinymce.urls')),
 )

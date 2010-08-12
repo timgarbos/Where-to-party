@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load facebook_tags %}
+
+{% block ogMeta %}
+<meta property="og:title" content="{{place.name}}"/>
+<meta property="og:image" content=""/>
+<meta property="og:description"
+          content="{{place.description|default:"A place on BringItOn.dk"}}"/>
+{% endblock %}
+
+{% block subtitle %}{{place}}{% endblock %}
+
+{% block content %}
+
+
+{% if is_owner_%}
+<h4>Edit Place</h4>
+<form method="post" action="">{{ postForm }}<br/><input type="submit" value"post"/></form>
+{% endif %}
+
+
+
+
+{% endblock %}
+
