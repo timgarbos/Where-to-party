@@ -1,0 +1,42 @@
+
+{% load facebook_tags %}
+
+<ul id="sidebar">
+
+
+					 {% if is_logged_in %} 
+		
+						<li><h5>Profil</h5>
+						<ul>
+							 <li> Brugers navn </li>
+							<li><strong> Brugers navn </strong></li>
+                            <li><a href="/"> Log ud</a></li>
+							 
+						</ul>
+                        {% show_connect_button %}	
+						</li>
+					 {% else %} 
+
+			       
+						<li><h5>Login</h5>
+						<ul>
+							 
+							<li> Få adgang til blablabla.. lorem ipsum bla bla bla ... wow og mere, gennem facebook </li>
+							 <li>{% show_connect_button %}	</li>
+						</ul>
+                        
+						</li>
+										
+				 {%endif%} 
+
+					<li><h5>Partners</h5>
+						<ul>
+							<li><a href="/">Bummelum!</a></li>
+                            <li><a href="/">Woohoooo!!!!</a></li>
+						</ul>
+						<a href="/" class="sidebar-read-more">Læs mere om vores partnere &raquo;</a>
+					</li>
+						
+				
+					
+				</ul><!-- End sidebar -->  

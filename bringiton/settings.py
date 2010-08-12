@@ -35,7 +35,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ('/home/garbos/bringiton/bringiton/media/','/Users/kwree/Desktop/Bring.It.On/bringiton/media/')
+MEDIA_ROOT = '/home/garbos/bringiton/bringiton/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -63,6 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'facebookconnect.middleware.FacebookConnectMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'bringiton.urls'
@@ -89,8 +90,11 @@ INSTALLED_APPS = (
     #'registration',
     'facebookconnect',
     'bringiton.places',
+    'django.contrib.flatpages',
+     'bringiton.menu',
 
 )
+SITE_ID = 1
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
 
 AUTHENTICATION_BACKENDS = (
@@ -107,6 +111,7 @@ DUMMY_FACEBOOK_INFO = {
     'status':None,
     'proxied_email':None,
 }
+STATIC_DOC_ROOT = '/home/garbos/bringiton/bringiton/media'
 
 FACEBOOK_API_KEY = '753868bea6d51ce7fe5f681454cc28ed'
 FACEBOOK_SECRET_KEY = '09472264b65509762767a8a63af32a8c'

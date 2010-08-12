@@ -10,6 +10,10 @@ class Place(models.Model):
     address = models.CharField(max_length=300)
     owners = models.ManyToManyField(User)
     description = models.TextField()
+    paidFrom = models.DateField()
+    paidTo = models.DateField()
+    image = models.ImageField(upload_to='places', null=True, blank=True)
+    profileImage = models.ImageField(upload_to='places', null=True, blank=True)
 
 class Post(models.Model):
     def __unicode__(self):

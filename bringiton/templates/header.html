@@ -1,0 +1,52 @@
+
+{% load facebook_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="p bloginfo('html_type'); ; charset=p bloginfo('charset'); " />
+
+	<title>BringItOn {% block subtitle %}Title here!{% endblock %}</title>
+
+	<link rel="stylesheet" href="/site_media/style.css" type="text/css" media="screen" />
+	<link rel="alternate" type="application/rss+xml" title="p bloginfo('name');  RSS Feed" href="p bloginfo('rss2_url'); " />
+	<link rel="alternate" type="application/atom+xml" title="p bloginfo('name');  Atom Feed" href="p bloginfo('atom_url'); " />
+		
+	<script src="/site_media/js/pngfix.js"></script>
+	<script src="/site_media/js/jquery-latest.js"></script>
+	<script src="/site_media/js/effects.core.js"></script>
+	<script src="/site_media/js/functions.js"></script>
+	{% facebook_js %}
+
+    <meta property="og:type" content="bar"/>
+    <meta property="og:url" content="http://bringiton.dk{{request.path}}"/>
+    
+    <meta property="og:site_name" content="BringItOn"/>
+    <meta property="fb:admins" content="USER_ID"/>
+    
+          
+{% block ogMeta %}
+<meta property="og:title" content="BringItOn"/>
+<meta property="og:image" content=""/>
+<meta property="og:description"
+          content="BringItOn.dk base site"/>
+{% endblock %}
+</head>
+<body>
+
+	<div id="header">
+		
+		<div class="container clearfix">
+		
+			<div id="logo">
+		
+				<h2>Din guide til byen </h2>
+				<h1><span></span><a href="/" title="Bring It On ">Bring It On</a></h1>
+				
+			</div><!-- End logo -->
+			
+			
+		
+		</div><!-- End Container -->
+		
+	</div><!-- End header -->

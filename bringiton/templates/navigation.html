@@ -1,0 +1,18 @@
+	<div id="navigation">
+	
+		<div class="container clearfix">
+	
+			<ul class="pages">
+{% load menubuilder %}{% menu main %} {% for item in menuitems %}
+
+
+				<li><a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>
+{% endfor %}
+				
+			</ul>
+			
+			
+			
+		</div><!-- End container -->
+		
+	</div><!-- End navigation -->

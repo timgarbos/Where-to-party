@@ -1,63 +1,205 @@
-
 {% load facebook_tags %}
+{% include "header.html" %}
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head> 
-<title>BringItOn {% block subtitle %}Title here!{% endblock %}</title> 
-<link href="http://garbos.itu.dk/bringiton/style.css" rel="stylesheet" type="text/css" /> 
-<link href="http://garbos.itu.dk/bringiton/layout.css" rel="stylesheet" type="text/css" /> 
-{% facebook_js %}
- 
-    <meta property="og:type" content="bar"/>
-    <meta property="og:url" content="http://bringiton.dk{{request.path}}"/>
-    
-    <meta property="og:site_name" content="BringItOn"/>
-    <meta property="fb:admins" content="USER_ID"/>
-    
-          
-{% block ogMeta %}
-<meta property="og:title" content="BringItOn"/>
-<meta property="og:image" content=""/>
-<meta property="og:description"
-          content="BringItOn.dk base site"/>
-{% endblock %}
-</head> 
-<body id="page1"> 
+{% include "navigation.html" %}
 
-<div class="tall_content"> 
-	<div class="site_center"> 
-<fb:like-box profile_id="185550966885" header="false"></fb:like-box>
-		<div class="main"> 
-
-			<!-- header  --> 
-			<div class="wr_logo"><h1>BringItOn | DK</h1></div> 
-
-			<div class="h_menu"><img src="http://garbos.itu.dk/bringiton/images/m1m.jpg" alt="" id="image1" /><a href="index-1.html" onmouseout="mm_swapImgRestore()" onmouseover="mm_swapImage('image2','','http://garbos.itu.dk/bringiton/images/m2m.jpg',2)"><img src="http://garbos.itu.dk/bringiton/images/m2.jpg" id="image2" alt="" /></a></div> 
-{% show_connect_button %}		
-</div>	
-	</div> 
-</div> 
-<div class="tall_bot"> 
-	<div class="tall_top"> 
-		<div class="site_center"> 
-			<div class="main"> 
-				<!-- content --> 
-				<div class="content"> 
-					{% block content %}Content here!{% endblock %}
+{% include "latestImages.html" %}
+	<div id="main-content" class="clearfix">
+	
+		<div class="container">
+	
+			<div class="col-580 left">
+			
+			
+			{% block content %}Content here!
+				
+			
+				<div  >
+			
+					<div class="post-meta clearfix">
+				
+						<h3 class="post-title left"><a href=" p the_permalink()   " rel="bookmark" title="Permanent Link to  p the_title_attribute();   "> p the_title();   </a></h3>
+						
+						<p class="post-info right">
+							<span>By  p the_author_posts_link();   </span>
+							 p the_time( 'l F j, Y' )   
+						</p>
+						
+					</div><!-- End post-meta -->
 					
-					<div class="clear"></div> 
-				</div> 
-			</div> 
-		</div> 
-	</div> 
-</div> 
-<!--footer--> 
-<div class="site_center"> 
-	<div class="main"> 
-		<div class="footer">BringItOn | DK</div> 
-	</div> 
-</div> 
-{% initialize_facebook_connect %}
-</body> 
+					<div class="post-box">
+					
+						<div class="post-content">
+					
+							<div class="comment-count">
+								 p comments_popup_link(__( '0 Comments' ), __( '1 Comment' ), __( '% Comments' ));   
+							</div>
+							
+							 p if( get_post_meta( $post->ID, "image_value", true ) ) :   
+							
+							<div class="post-image">
+								<a href=" p the_permalink()   " rel="bookmark" title="Permanent Link to  p the_title_attribute();   "><img src=" p bloginfo( 'template_directory' );   /timthumb.php?src= p echo get_post_meta( $post->ID, "image_value", true );   &amp;w=521&amp;h=246&amp;zc=1" alt=" p the_title();   " /></a>
+							</div>
+							
+							 p endif;   
+							
+							<div class="post-intro">
+							
+								 p the_content( '' );   
+								
+							</div><!-- End post-intro -->
+							
+						</div><!-- End post-content -->
+						
+						<div class="post-footer clearfix">
+						
+							<div class="continue-reading">
+								<a href=" p the_permalink()   #more- p the_ID();   " rel="bookmark" title="Continue Reading  p the_title_attribute();   ">Continue Reading</a>
+							</div>
+							
+							<div class="category-menu">
+														
+								<div class="category clearfix">
+									<div><a href="#"><span class="indicator"></span>  p echo $category[0]->cat_name;   </a></div>
+								</div>
+																
+								<div class="dropdown">
+								
+									<ul class="cat-posts">
+										 p
+											$posted = get_posts( "category=" . $category[0]->cat_ID );
+											if( $posted ) :
+												foreach( $posted as $post ) : setup_postdata( $posted );
+										  
+										<li><a href=" p the_permalink()   " rel="bookmark" title="Permanent Link to  p the_title_attribute();   "> p the_title();   </a><span> p the_time( ' F j, Y' )   </span></li>
+										 p
+												endforeach;
+											endif;
+										  
+										<li class="view-more"><a href=" p echo get_category_link( $category[0]->cat_ID );   " class="view-more">View More &raquo;</a></li>
+									</ul>
+									
+								</div><!-- End dropdown -->
+							
+							</div><!-- End category -->
+													
+						</div><!-- End post-footer -->
+					
+					</div><!-- End post-box -->
+					
+				</div><!-- End post -->
+				
+				 p
+						endwhile;
+					endif;
+				  
+				
+				 p
+					query_posts( 'showposts=4&offset=2' );
+					if (have_posts()) : $counter = 0;
+						while (have_posts()) : the_post(); $category = get_the_category();
+						
+						if( $counter % 2 == 0 )
+							$end = "";
+						else
+							$end = "last";
+				  
+				
+				<div  p post_class( 'single ' . $end );   >
+			
+					<div class="post-meta clearfix">
+				
+						<h3 class="post-title left"><a href=" p the_permalink()   " rel="bookmark" title="Permanent Link to  p the_title_attribute();   "> p the_title();   </a></h3>
+						
+					</div><!-- End post-meta -->
+					
+					<div class="post-box">
+					
+						<div class="post-content">
+					
+							<div class="comment-count">
+								 p comments_popup_link(__( '0 Comments' ), __( '1 Comment' ), __( '% Comments' ));   
+							</div>
+							
+							 p if( get_post_meta( $post->ID, "image_value", true ) ) :   
+							
+							<div class="post-image">
+								<img src=" p bloginfo( 'template_directory' );   /timthumb.php?src= p echo get_post_meta( $post->ID, "image_value", true );   &amp;w=235&amp;h=109&amp;zc=1" alt=" p the_title();   " />
+							</div>
+							
+							 p endif;   
+							
+							<div class="post-intro">
+							
+								 p the_excerpt( '' );   
+								
+							</div><!-- End post-intro -->
+							
+						</div><!-- End post-content -->
+						
+						<div class="post-footer clearfix">
+						
+							<div class="continue-reading">
+								<a href=" p the_permalink()   #more- p the_ID();   " rel="bookmark" title="Continue Reading  p the_title_attribute();   ">Continue Reading</a>
+							</div>
+																				
+						</div><!-- End post-footer -->
+					
+					</div><!-- End post-box -->
+					
+				</div><!-- End post -->
+				
+				 p
+					// Clear the left float to allow for different heights
+					if( $counter % 2 != 0 )
+						echo'<div style="clear:left;"> </div>';
+				  
+				
+				 p
+						$counter++;
+						endwhile;
+					endif;
+				  
+					<br />
+				 p
+					query_posts( 'showposts=6&offset=6' );
+					if (have_posts()) :
+						while (have_posts()) : the_post(); $category = get_the_category();
+				  
+				
+				<div  p post_class( );   >
+			
+					<div class="post-meta clearfix">
+				
+						<h3 class="post-title-small left"><a href=" p the_permalink()   " rel="bookmark" title="Permanent Link to  p the_title_attribute();   "> p the_title();   </a></h3>
+						
+						<p class="post-info right">
+							<span>By  p the_author_posts_link();   </span>
+							 p the_time( 'l F j, Y' )   
+						</p>
+						
+					</div><!-- End post-meta -->
+					
+				</div><!-- End archive -->
+				
+				 p
+						endwhile;
+					endif;
+				  
+				{% endblock %}
+			</div><!-- End col-580 (Left Column) -->
+			
+
+			<div class="col-340 right">
+	{% include "sidebar.html" %}		
+				 
+								
+			</div><!-- End col-340 (Right Column) -->
+			
+		</div><!-- End container -->
+		
+	</div><!-- End main-content -->
+{% include "footer.html" %}	
+	{% initialize_facebook_connect %}
+</body>
 </html>

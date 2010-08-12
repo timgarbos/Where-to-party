@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+{% extends "base.html" %}
+{% load facebook_tags %}
+
+{% block ogMeta %}
+<meta property="og:title" content="{{place.name}}"/>
+<meta property="og:image" content=""/>
+<meta property="og:description"
+          content="{{place.description|default:"A place on BringItOn.dk"}}"/>
+{% endblock %}
+
+{% block subtitle %}{{ flatpage.title }}{% endblock %}
+
+{% block content %}
+<h2>{{flatpage.title}}</h2>
+
+{{ flatpage.content }}
+
+{% endblock %}
+

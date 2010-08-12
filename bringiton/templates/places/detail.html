@@ -11,23 +11,96 @@
 {% block subtitle %}{{place}}{% endblock %}
 
 {% block content %}
-<h2>{{place.name}}</h2><fb:like></fb:like> <fb:prompt-permission perms="email">Follow this place by email</fb:prompt-permission>
-<p>{{place.description|default:"A place on BringItOn.dk"}}</p>
 
-{% if is_owner%}
-<h3>New post</h3>
-<form method="post" action="">{{ postForm }}<br/><input type="submit" value"post"/></form>{% endif %}
+                <div  >
+			
+					<div class="post-meta clearfix">
+				
+						<h3 class="post-title left"><a href="/" rel="bookmark" title="Permanent Link to place ">{{place.name}}</a></h3>
+						
+						<p class="post-info right">
+							<fb:like></fb:like> <fb:prompt-permission perms="email">Follow by email</fb:prompt-permission>
+							  
+						</p>
+						
+					</div><!-- End post-meta -->
+					
+					<div class="post-box">
+					
+						<div class="post-content">
+					
+						
+							
+							<div class="post-image">
+								<img class="place-image" src="/&amp;w=200&amp;h=200&amp;zc=1" alt="{{place.name}} image here" title="image here"/>
+							</div>
+
+							<div class="post-intro">
+							
+								<p>{{place.description|default:"A place on BringItOn.dk"}}</p>
+
+								
+							</div><!-- End post-intro -->
+							
+						</div><!-- End post-content -->
+                       
+					
+					</div><!-- End post-box -->
+					
+				</div><!-- End post -->
 
 
-<h3>Posts</h3>
+{% if is_owner_%}
+<h4>New post</h4>
+<form method="post" action="">{{ postForm }}<br/><input type="submit" value"post"/></form>
+{% endif %}
+
+
+
 {% for post in posts %}
-    <div>
-	<p>{{post.pub_date}}</p>
-    <p>{{post.content}}</p>
-    <fb:comments xid="{{post.id}}"> </fb:comments>
-    </div>
-{% endfor %}
 
+<div  >
+			
+					
+					
+					<div class="post-box">
+					
+						<div class="post-content">
+					        
+						
+							<div class="post-image">
+								<img class="place-profileImage" src="/&amp;w=50&amp;h=50&amp;zc=1" alt="{{place.name}} image here" title="image here"/>
+							</div>
+						
+
+							<div class="post-intro">
+							
+								 <p>{{post.content}}</p>
+
+								
+							</div><!-- End post-intro -->
+							<p class="post-info right">
+                            {{post.pub_date}}
+							<fb:like></fb:like>
+							  
+						</p>
+						</div><!-- End post-content -->
+                       <div class="post-footer clearfix">
+							<div class="comment-count">
+								<a href="#"> 42 comments</a>
+							</div>
+							
+							
+							<fb:comments xid="{{post.id}}"> </fb:comments>
+													
+						</div><!-- End post-footer -->
+					
+					</div><!-- End post-box -->
+					
+				</div><!-- End post -->
+
+
+{% endfor %}
 
 {% endblock %}
 
